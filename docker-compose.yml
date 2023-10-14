@@ -1,15 +1,10 @@
 services:
-  license-server:
-    build:
-      context: ./license_portal
-    links:
-      - postgres
-    volumes:
-      - ./license_portal:/app
-
-  postgres:
-    image: 'postgres:13'
+  db:
+    image: mariadb
     environment:
-     POSTGRES_USER: 'licenses'
-     POSTGRES_PASSWORD: 'licenses'
-     POSTGRES_DB: 'licenses'
+      - MYSQL_ROOT_PASSWORD=mariadb123
+      - MYSQL_DATABASE=afinidatadb
+      - MYSQL_USER=userafinidata
+      - MYSQL_PASSWORD=passwordafinidata
+    ports:
+      - "3306:3306"
