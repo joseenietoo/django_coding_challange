@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from .models import License
+from .serializers import LicenseSerializer
 
-# Create your views here.
+class LicenseViewSet(viewsets.ModelViewSet):
+    queryset = License.objects.all()
+    serializer_class = LicenseSerializer
