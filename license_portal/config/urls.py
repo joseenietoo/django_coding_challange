@@ -25,5 +25,5 @@ router.register(r'licenses', views.LicenseViewSet)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include(router.urls)), 
+    url(r'^api/licenses/enviar_notificacion_correo/$', views.enviar_notificacion_correo, name='enviar_notificacion_correo'),
 ]
-
