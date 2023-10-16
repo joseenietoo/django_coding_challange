@@ -1,0 +1,212 @@
+[
+    {
+        "model": "licenses.client",
+        "pk": 1,
+        "fields": {
+            "client_name": "Cliente 1",
+            "poc_contact_name": "Contacto 1",
+            "poc_contact_email": "contacto1@example.com",
+            "admin_poc": 1
+        }
+    },
+    {
+        "model": "licenses.license",
+        "pk": 1,
+        "fields": {
+            "client": 1,
+            "package": 0,
+            "license_type": 0,
+            "created_datetime": "2023-06-01T12:00:00Z",
+            "expiration_datetime": "2023-10-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "licenses.client",
+        "pk": 2,
+        "fields": {
+            "client_name": "Cliente 2",
+            "poc_contact_name": "Contacto 2",
+            "poc_contact_email": "contacto2@example.com",
+            "admin_poc": 2
+        }
+    },
+    {
+        "model": "licenses.license",
+        "pk": 2,
+        "fields": {
+            "client": 2,
+            "package": 1,
+            "license_type": 1,
+            "created_datetime": "2023-06-15T12:00:00Z",
+            "expiration_datetime": "2023-09-15T12:00:00Z"
+        }
+    },
+    {
+        "model": "licenses.client",
+        "pk": 3,
+        "fields": {
+            "client_name": "Cliente 3",
+            "poc_contact_name": "Contacto 3",
+            "poc_contact_email": "contacto3@example.com",
+            "admin_poc": 3
+        }
+    },
+    {
+        "model": "licenses.license",
+        "pk": 3,
+        "fields": {
+            "client": 3,
+            "package": 2,
+            "license_type": 0,
+            "created_datetime": "2023-06-30T12:00:00Z",
+            "expiration_datetime": "2023-10-30T12:00:00Z"
+        }
+    },
+    {
+        "model": "licenses.client",
+        "pk": 4,
+        "fields": {
+            "client_name": "Cliente 4",
+            "poc_contact_name": "Contacto 4",
+            "poc_contact_email": "contacto4@example.com",
+            "admin_poc": 4
+        }
+    },
+    {
+        "model": "licenses.license",
+        "pk": 4,
+        "fields": {
+            "client": 4,
+            "package": 0,
+            "license_type": 1,
+            "created_datetime": "2023-07-01T12:00:00Z",
+            "expiration_datetime": "2023-11-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "licenses.client",
+        "pk": 5,
+        "fields": {
+            "client_name": "Cliente 5",
+            "poc_contact_name": "Contacto 5",
+            "poc_contact_email": "contacto5@example.com",
+            "admin_poc": 5
+        }
+    },
+    {
+        "model": "licenses.license",
+        "pk": 5,
+        "fields": {
+            "client": 5,
+            "package": 1,
+            "license_type": 0,
+            "created_datetime": "2023-07-15T12:00:00Z",
+            "expiration_datetime": "2023-11-15T12:00:00Z"
+        }
+    },
+    {
+        "model": "licenses.client",
+        "pk": 6,
+        "fields": {
+            "client_name": "Cliente 6",
+            "poc_contact_name": "Contacto 6",
+            "poc_contact_email": "contacto6@example.com",
+            "admin_poc": 6
+        }
+    },
+    {
+        "model": "licenses.license",
+        "pk": 6,
+        "fields": {
+            "client": 6,
+            "package": 2,
+            "license_type": 1,
+            "created_datetime": "2023-07-30T12:00:00Z",
+            "expiration_datetime": "2023-11-30T12:00:00Z"
+        }
+    },
+    {
+        "model": "licenses.client",
+        "pk": 7,
+        "fields": {
+            "client_name": "Cliente 7",
+            "poc_contact_name": "Contacto 7",
+            "poc_contact_email": "contacto7@example.com",
+            "admin_poc": 7
+        }
+    },
+    {
+        "model": "licenses.license",
+        "pk": 7,
+        "fields": {
+            "client": 7,
+            "package": 0,
+            "license_type": 0,
+            "created_datetime": "2023-08-01T12:00:00Z",
+            "expiration_datetime": "2023-12-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "licenses.client",
+        "pk": 8,
+        "fields": {
+            "client_name": "Cliente 8",
+            "poc_contact_name": "Contacto 8",
+            "poc_contact_email": "contacto8@example.com",
+            "admin_poc": 8
+        }
+    },
+    {
+        "model": "licenses.license",
+        "pk": 8,
+        "fields": {
+            "client": 8,
+            "package": 1,
+            "license_type": 1,
+            "created_datetime": "2023-08-15T12:00:00Z",
+            "expiration_datetime": "2023-12-15T12:00:00Z"
+        }
+    },
+    {
+        "model": "licenses.client",
+        "pk": 9,
+        "fields": {
+            "client_name": "Cliente 9",
+            "poc_contact_name": "Contacto 9",
+            "poc_contact_email": "contacto9@example.com",
+            "admin_poc": 9
+        }
+    },
+    {
+        "model": "licenses.license",
+        "pk": 9,
+        "fields": {
+            "client": 9,
+            "package": 2,
+            "license_type": 0,
+            "created_datetime": "2023-08-30T12:00:00Z",
+            "expiration_datetime": "2023-12-30T12:00:00Z"
+        }
+    },
+    {
+        "model": "licenses.client",
+        "pk": 10,
+        "fields": {
+            "client_name": "Cliente 10",
+            "poc_contact_name": "Contacto 10",
+            "poc_contact_email": "contacto10@example.com",
+            "admin_poc": 10
+        }
+    },
+    {
+        "model": "licenses.license",
+        "pk": 10,
+        "fields": {
+            "client": 10,
+            "package": 0,
+            "license_type": 0,
+            "created_datetime": "2023-09-01T12:00:00Z",
+            "expiration_datetime": "2023-01-01T12:00:00Z"
+        }
+    }
+]
