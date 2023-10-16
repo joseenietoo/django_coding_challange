@@ -3,6 +3,8 @@ from rest_framework.response import Response
 from django.core.mail import send_mail
 from django.utils import timezone
 from .models import License, EmailLog
+from rest_framework import viewsets
+from .serializers import LicenseSerializer
 
 @api_view(['POST'])
 def enviar_notificacion_correo(request):
@@ -26,11 +28,15 @@ def enviar_notificacion_correo(request):
         send_mail(
             'Notificación de Expiración de Licencia',
             cuerpo_correo,
-            'tu@email.com',
-            ['destinatario@ejemplo.com'],
+            'jose.nietov1@mayor.cl',
+            ['jose.nietov1@mayor.cl'],
             fail_silently=False,
         )
         
         EmailLog.objects.create(license_id=license.id)
 
     return Response({'mensaje': 'Correos enviados exitosamente'})
+
+class LicenseViewSet(viewsets.ModelViewSet):
+    queryset = License.objects.all()
+    serializer_class = LicenseSerializer
