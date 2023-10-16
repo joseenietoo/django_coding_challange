@@ -4,7 +4,7 @@ from django.core.mail import send_mail
 from django.utils import timezone
 from .models import License, EmailLog
 from rest_framework import viewsets
-from .serializers import LicenseSerializer
+from .serializers import LicenseSerializer, EmailLogSerializer
 
 @api_view(['POST'])
 def enviar_notificacion_correo(request):
@@ -40,3 +40,9 @@ def enviar_notificacion_correo(request):
 class LicenseViewSet(viewsets.ModelViewSet):
     queryset = License.objects.all()
     serializer_class = LicenseSerializer
+
+@api_view(['GET'])
+def lista_correos_enviados(request):
+    correos_enviados = EmailLog.objects.all()
+    serializer = EmailLogSerializer(correos_enviados, many=True)
+    return Response(serializer.data)
