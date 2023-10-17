@@ -79,10 +79,18 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'afinidatadb',
-        'USER': 'userafinidata',
-        'PASSWORD': 'passwordafinidata',
+        'USER': 'usermysql',
+        'PASSWORD': 'passwordmysql',
         'HOST': 'db',
         'PORT': 3306,
+    },
+    'test': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'test_afinidatadb',
+        'USER': 'usermysql',
+        'PASSWORD': 'passwordmysql',
+        'HOST': 'db',
+        'PORT': '3306',
     }
 }
 
