@@ -42,7 +42,7 @@ class LicenseViewSet(viewsets.ModelViewSet):
     serializer_class = LicenseSerializer
 
 @api_view(['GET'])
-def lista_correos_enviados(request):
-    correos_enviados = EmailLog.objects.all()
+def lista_correos_enviados(request, cantidad):
+    correos_enviados = EmailLog.objects.order_by('-sent_at')[:cantidad]
     serializer = EmailLogSerializer(correos_enviados, many=True)
     return Response(serializer.data)
