@@ -46,3 +46,8 @@ def lista_correos_enviados(request, cantidad):
     correos_enviados = EmailLog.objects.order_by('-sent_at')[:cantidad]
     serializer = EmailLogSerializer(correos_enviados, many=True)
     return Response(serializer.data)
+
+@api_view(['GET'])
+def resumen_notificaciones(request):
+    total_correos_enviados = EmailLog.objects.count()
+    return Response({'total_correos_enviados': total_correos_enviados})
