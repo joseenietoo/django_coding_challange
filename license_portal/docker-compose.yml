@@ -1,15 +1,21 @@
 version: '2.2'
 
+networks:
+  my_network:
+    driver: bridge
+
 services:
   db:
     image: mariadb
     environment:
-      - MYSQL_ROOT_PASSWORD=mariadb123
+      - MYSQL_ROOT_PASSWORD=12345
       - MYSQL_DATABASE=afinidatadb
-      - MYSQL_USER=userafinidata
-      - MYSQL_PASSWORD=passwordafinidata
+      - MYSQL_USER=usermysql
+      - MYSQL_PASSWORD=passwordmysql
     ports:
       - "3306:3306"
+    networks:
+      - my_network
 
   web:
     build:
@@ -22,4 +28,5 @@ services:
       - .:/app
     depends_on:
       - db
-
+    networks:
+      - my_network
