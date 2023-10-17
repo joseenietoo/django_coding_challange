@@ -10,3 +10,7 @@ class EmailLogSerializer(serializers.ModelSerializer):
     class Meta:
         model = EmailLog
         fields = ['sent_at', 'license_id']
+
+class EmailNotificationSerializer(serializers.Serializer):
+    client_id = serializers.IntegerField()
+    license_id = serializers.IntegerField()
