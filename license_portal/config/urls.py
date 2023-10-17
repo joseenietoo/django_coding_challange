@@ -27,4 +27,5 @@ urlpatterns = [
     url(r'^api/', include(router.urls)), 
     url(r'^api/licenses/enviar_notificacion_correo/$', views.enviar_notificacion_correo, name='enviar_notificacion_correo'),
     url(r'^api/licenses/lista_correos_enviados/(?P<cantidad>\d+)/$', views.lista_correos_enviados, name='lista_correos_enviados'),
+    url(r'^api/licenses/resumen_notificaciones/$', views.resumen_notificaciones, name='resumen_notificaciones'),
 ]
